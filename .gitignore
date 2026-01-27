@@ -69,9 +69,12 @@ stamp-h1
 /src/love
 /src/tags
 .vs/
-.vscode/
+# .vscode/
 /testing/output/*.xml
 /testing/output/*.html
 /testing/output/*.md
 /testing/output/actual/*.png
 /testing/output/difference/*.png
+
+# cmake
+/build/
