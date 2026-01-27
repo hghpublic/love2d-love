@@ -101,6 +101,17 @@ endif()
 
 message(STATUS "Target platform: ${LOVE_TARGET_PLATFORM}")
 
+# fmt
+
+# include(FetchContent)
+
+# FetchContent_Declare(fmt
+#     GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+#     GIT_TAG master
+# )
+# FetchContent_MakeAvailable(fmt)
+
+
 add_library(lovedep::SDL INTERFACE IMPORTED)
 add_library(lovedep::Freetype INTERFACE IMPORTED)
 add_library(lovedep::Harfbuzz INTERFACE IMPORTED)
@@ -1985,6 +1996,11 @@ if(MSVC OR MINGW)
 		extra/windows/love.ico
 	)
 endif()
+
+find_package(PNG REQUIRED)
+target_link_libraries(liblove PNG::PNG)
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(liblove fmt::fmt)
 
 #
 # love (executable)
