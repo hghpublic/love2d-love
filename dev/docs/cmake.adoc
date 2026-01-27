@@ -1,0 +1,284 @@
+= cmake
+
+== Issues
+
+----
+sudo apt install libx11-dev libxft-dev libxext-dev
+sudo apt install libwayland-dev libxkbcommon-dev libegl1-mesa-dev
+sudo apt install libibus-1.0-dev
+----
+
+----
+[proc] Executing command: /usr/bin/aarch64-linux-gnu-gcc-16 -v
+[main] Configuring project: love2d-love 
+[proc] Executing command: /usr/local/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_TOOLCHAIN_FILE:STRING=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-16 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++-16 --no-warn-unused-cli -S /workspaces/love2d-love -B /workspaces/love2d-love/build -G Ninja
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Running vcpkg install
+[cmake] A suitable version of cmake was not found (required v4.3.3).
+[cmake] Downloading https://github.com/Kitware/CMake/releases/download/v4.3.3/cmake-4.3.3-linux-aarch64.tar.gz -> cmake-4.3.3-linux-aarch64.tar.gz
+[cmake] Successfully downloaded cmake-4.3.3-linux-aarch64.tar.gz
+[cmake] Extracting cmake...
+[cmake] Detecting compiler hash for triplet arm64-linux...
+[cmake] Compiler found: /usr/bin/c++
+[cmake] The following packages will be built and installed:
+[cmake]   * dbus:arm64-linux@1.16.2#5
+[cmake]   * expat:arm64-linux@2.8.2
+[cmake]     sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1
+[cmake]   * vcpkg-cmake:arm64-linux@2024-04-23
+[cmake]   * vcpkg-cmake-config:arm64-linux@2024-05-23
+[cmake] Additional packages (*) will be modified to complete this operation.
+[cmake] Restored 0 package(s) from /home/vscode/.cache/vcpkg/archives in 12.4 us. Use --debug to see more details.
+[cmake] Installing 1/5 vcpkg-cmake-config:arm64-linux@2024-05-23...
+[cmake] vcpkg-cmake-config:arm64-linux@2024-05-23 package ABI: c41e72641911da7b2f764924c2bfe23edccbb9b5330caf3509a3029679a2ec56
+[cmake] Building vcpkg-cmake-config:arm64-linux@2024-05-23...
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-config_arm64-linux/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-config_arm64-linux/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-config_arm64-linux/share/vcpkg-cmake-config/copyright
+[cmake] -- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+[cmake] Starting submission of vcpkg-cmake-config:arm64-linux@2024-05-23 to 1 binary cache(s) in the background
+[cmake] Elapsed time to handle vcpkg-cmake-config:arm64-linux: 12.8 ms
+[cmake] Installing 2/5 vcpkg-cmake:arm64-linux@2024-04-23...
+[cmake] vcpkg-cmake:arm64-linux@2024-04-23 package ABI: a74666ead7cfc9ccd3cfa5d96ed16ed85e32dc06861cf007d937106f31b3c3a3
+[cmake] Building vcpkg-cmake:arm64-linux@2024-04-23...
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake_arm64-linux/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake_arm64-linux/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake_arm64-linux/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake_arm64-linux/share/vcpkg-cmake/vcpkg-port-config.cmake
+[cmake] -- Installing: /usr/local/vcpkg/packages/vcpkg-cmake_arm64-linux/share/vcpkg-cmake/copyright
+[cmake] -- Performing post-build validation
+[cmake] Starting submission of vcpkg-cmake:arm64-linux@2024-04-23 to 1 binary cache(s) in the background
+[cmake] Elapsed time to handle vcpkg-cmake:arm64-linux: 13 ms
+[cmake] Completed submission of vcpkg-cmake-config:arm64-linux@2024-05-23 to 1 binary cache(s) in 1.62 ms
+[cmake] Installing 3/5 expat:arm64-linux@2.8.2...
+[cmake] expat:arm64-linux@2.8.2 package ABI: 4cf45ce6cbc9dca99e0a36d7faadf4bf8c53a6b5c122fe42e176db24093258f7
+[cmake] Building expat:arm64-linux@2.8.2...
+[cmake] Downloading https://github.com/libexpat/libexpat/archive/R_2_8_2.tar.gz -> libexpat-libexpat-R_2_8_2.tar.gz
+[cmake] Successfully downloaded libexpat-libexpat-R_2_8_2.tar.gz
+[cmake] -- Extracting source /usr/local/vcpkg-downloads/libexpat-libexpat-R_2_8_2.tar.gz
+[cmake] -- Using source at /usr/local/vcpkg/buildtrees/expat/src/R_2_8_2-303f035c99.clean
+[cmake] -- Configuring arm64-linux
+[cmake] -- Building arm64-linux-dbg
+[cmake] -- Building arm64-linux-rel
+[cmake] -- Fixing pkgconfig file: /usr/local/vcpkg/packages/expat_arm64-linux/lib/pkgconfig/expat.pc
+[cmake] -- Fixing pkgconfig file: /usr/local/vcpkg/packages/expat_arm64-linux/debug/lib/pkgconfig/expat.pc
+[cmake] -- Installing: /usr/local/vcpkg/packages/expat_arm64-linux/share/expat/copyright
+[cmake] -- Performing post-build validation
+[cmake] Starting submission of expat:arm64-linux@2.8.2 to 1 binary cache(s) in the background
+[cmake] Elapsed time to handle expat:arm64-linux: 3.4 s
+[cmake] Completed submission of vcpkg-cmake:arm64-linux@2024-04-23 to 1 binary cache(s) in 1.66 ms
+[cmake] Installing 4/5 dbus:arm64-linux@1.16.2#5...
+[cmake] dbus:arm64-linux@1.16.2#5 package ABI: f2538f30c05e01462a5f6da0bb2146ebeb775289c267785d5407f9c3f773ef3f
+[cmake] Building dbus:arm64-linux@1.16.2#5...
+[cmake] -- Note: dbus only supports dynamic library linkage. Building dynamic library.
+[cmake] Downloading https://gitlab.freedesktop.org//dbus/dbus/-/archive/dbus-1.16.2/dbus-dbus-1.16.2.tar.gz -> dbus-dbus-dbus-1.16.2.tar.gz
+[cmake] Successfully downloaded dbus-dbus-dbus-1.16.2.tar.gz
+[cmake] -- Extracting source /usr/local/vcpkg-downloads/dbus-dbus-dbus-1.16.2.tar.gz
+[cmake] -- Applying patch cmake.dep.patch
+[cmake] -- Applying patch pkgconfig.patch
+[cmake] -- Applying patch getpeereid.patch
+[cmake] -- Applying patch libsystemd.patch
+[cmake] -- Applying patch remove-path.patch
+[cmake] -- Applying patch remove-var-lib-dbus-creation.patch
+[cmake] -- Applying patch session-socket-dir.diff
+[cmake] -- Using source at /usr/local/vcpkg/buildtrees/dbus/src/bus-1.16.2-1cbfa372b6.clean
+[cmake] -- Configuring arm64-linux
+[cmake] -- Building arm64-linux-dbg
+[cmake] -- Building arm64-linux-rel
+[cmake] -- Fixing pkgconfig file: /usr/local/vcpkg/packages/dbus_arm64-linux/lib/pkgconfig/dbus-1.pc
+[cmake] -- Fixing pkgconfig file: /usr/local/vcpkg/packages/dbus_arm64-linux/debug/lib/pkgconfig/dbus-1.pc
+[cmake] -- Installing: /usr/local/vcpkg/packages/dbus_arm64-linux/share/dbus/copyright
+[cmake] Downloading https://github.com/NixOS/patchelf/releases/download/0.19.0/patchelf-0.19.0-aarch64.tar.gz -> patchelf-0.19.0-aarch64.tar.gz
+[cmake] Successfully downloaded patchelf-0.19.0-aarch64.tar.gz
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/lib/libdbus-1.so.3.38.3' (From '' -> To '$ORIGIN')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/libexec/dbus-daemon-launch-helper' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-cleanup-sockets' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-daemon' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-launch' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-monitor' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-run-session' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-send' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-test-tool' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-update-activation-environment' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-uuidgen' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/lib/libdbus-1.so.3.38.3' (From '' -> To '$ORIGIN')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/libexec/dbus-daemon-launch-helper' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-cleanup-sockets' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-daemon' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-launch' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-monitor' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-run-session' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-send' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-test-tool' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-update-activation-environment' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-uuidgen' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+[cmake] -- Performing post-build validation
+[cmake] Starting submission of dbus:arm64-linux@1.16.2#5 to 1 binary cache(s) in the background
+[cmake] Elapsed time to handle dbus:arm64-linux: 8.2 s
+[cmake] Completed submission of expat:arm64-linux@2.8.2 to 1 binary cache(s) in 24 ms
+[cmake] Installing 5/5 sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1...
+[cmake] sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1 package ABI: 2aeb0b1ef5f1e60d06a83ba74d83ef3ea95e2d5d1f5f9b90aa88e628be8f5053
+[cmake] Building sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1...
+[cmake] Downloading https://github.com/libsdl-org/SDL/archive/release-3.4.10.tar.gz -> libsdl-org-SDL-release-3.4.10.tar.gz
+[cmake] Successfully downloaded libsdl-org-SDL-release-3.4.10.tar.gz
+[cmake] -- Extracting source /usr/local/vcpkg-downloads/libsdl-org-SDL-release-3.4.10.tar.gz
+[cmake] -- Applying patch fix-freebsd.patch
+[cmake] -- Using source at /usr/local/vcpkg/buildtrees/sdl3/src/ase-3.4.10-5d1d805478.clean
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:35 (message):
+[cmake]   You will need to install Xorg dependencies to use feature x11:
+[cmake] 
+[cmake]   sudo apt install libx11-dev libxft-dev libxext-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:38 (message):
+[cmake]   You will need to install Wayland dependencies to use feature wayland:
+[cmake] 
+[cmake]   sudo apt install libwayland-dev libxkbcommon-dev libegl1-mesa-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:41 (message):
+[cmake]   You will need to install ibus dependencies to use feature ibus:
+[cmake] 
+[cmake]   sudo apt install libibus-1.0-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] -- Configuring arm64-linux
+[cmake] CMake Error at scripts/cmake/vcpkg_execute_required_process.cmake:127 (message):
+[cmake]     Command failed: /usr/bin/ninja -v
+[cmake]     Working Directory: /usr/local/vcpkg/buildtrees/sdl3/arm64-linux-rel/vcpkg-parallel-configure
+[cmake]     Error code: 1
+[cmake]     See logs for more information:
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-dbg-CMakeCache.txt.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-rel-CMakeCache.txt.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-dbg-CMakeConfigureLog.yaml.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-rel-CMakeConfigureLog.yaml.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-out.log
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   /workspaces/love2d-love/build/vcpkg_installed/arm64-linux/share/vcpkg-cmake/vcpkg_cmake_configure.cmake:269 (vcpkg_execute_required_process)
+[cmake]   ports/sdl3/portfile.cmake:58 (vcpkg_cmake_configure)
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] error: building sdl3:arm64-linux failed with: BUILD_FAILED
+[cmake] See https://learn.microsoft.com/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli for more information.
+[cmake] Elapsed time to handle sdl3:arm64-linux: 9.6 s
+[cmake] Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
+[cmake] Then check for known issues at:
+[cmake]   https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+sdl3
+[cmake] You can submit a new issue at:
+[cmake]   https://github.com/microsoft/vcpkg/issues/new?title=%5Bsdl3%5D%20build%20error%20on%20arm64-linux&body=Copy%20issue%20body%20from%20%2Fworkspaces%2Flove2d-love%2Fbuild%2Fvcpkg_installed%2Fvcpkg%2Fissue_body.md
+[cmake] You can also submit an issue by running (GitHub CLI must be installed):
+[cmake]   /usr/bin/gh issue create -R microsoft/vcpkg --title "[sdl3] Build failure on arm64-linux" --body-file /workspaces/love2d-love/build/vcpkg_installed/vcpkg/issue_body.md
+[cmake] Completed submission of dbus:arm64-linux@1.16.2#5 to 1 binary cache(s) in 153 ms
+[cmake] -- Running vcpkg install - failed
+[cmake] CMake Error at /usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake:984 (message):
+[cmake]   vcpkg install failed.  See logs for more information:
+[cmake]   /workspaces/love2d-love/build/vcpkg-manifest-install.log
+[cmake] Call Stack (most recent call first):
+[cmake]   /opt/cmake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:146 (include)
+[cmake]   CMakeLists.txt:28 (project)
+[cmake] 
+[cmake] 
+[cmake] CMake Error: CMake was unable to find a build program corresponding to "Ninja".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+[cmake] -- Configuring incomplete, errors occurred!
+[proc] The command: /usr/local/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_TOOLCHAIN_FILE:STRING=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-16 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++-16 --no-warn-unused-cli -S /workspaces/love2d-love -B /workspaces/love2d-love/build -G Ninja exited with code: 1
+[main] Configuring project: love2d-love 
+[proc] Executing command: /usr/local/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_TOOLCHAIN_FILE:STRING=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-16 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++-16 --no-warn-unused-cli -S /workspaces/love2d-love -B /workspaces/love2d-love/build -G Ninja
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Running vcpkg install
+[cmake] Detecting compiler hash for triplet arm64-linux...
+[cmake] Compiler found: /usr/bin/c++
+[cmake] The following packages are already installed:
+[cmake]   * dbus:arm64-linux@1.16.2#5
+[cmake]   * expat:arm64-linux@2.8.2
+[cmake]   * vcpkg-cmake:arm64-linux@2024-04-23
+[cmake]   * vcpkg-cmake-config:arm64-linux@2024-05-23
+[cmake] The following packages will be built and installed:
+[cmake]     sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1
+[cmake] Restored 0 package(s) from /home/vscode/.cache/vcpkg/archives in 7.58 us. Use --debug to see more details.
+[cmake] Installing 1/1 sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1...
+[cmake] sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1 package ABI: 2aeb0b1ef5f1e60d06a83ba74d83ef3ea95e2d5d1f5f9b90aa88e628be8f5053
+[cmake] Building sdl3[core,dbus,ibus,wayland,x11]:arm64-linux@3.4.10#1...
+[cmake] -- Using cached libsdl-org-SDL-release-3.4.10.tar.gz
+[cmake] -- Cleaning sources at /usr/local/vcpkg/buildtrees/sdl3/src/ase-3.4.10-5d1d805478.clean. Use --editable to skip cleaning for the packages you specify.
+[cmake] -- Extracting source /usr/local/vcpkg-downloads/libsdl-org-SDL-release-3.4.10.tar.gz
+[cmake] -- Applying patch fix-freebsd.patch
+[cmake] -- Using source at /usr/local/vcpkg/buildtrees/sdl3/src/ase-3.4.10-5d1d805478.clean
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:35 (message):
+[cmake]   You will need to install Xorg dependencies to use feature x11:
+[cmake] 
+[cmake]   sudo apt install libx11-dev libxft-dev libxext-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:38 (message):
+[cmake]   You will need to install Wayland dependencies to use feature wayland:
+[cmake] 
+[cmake]   sudo apt install libwayland-dev libxkbcommon-dev libegl1-mesa-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] CMake Warning at ports/sdl3/portfile.cmake:41 (message):
+[cmake]   You will need to install ibus dependencies to use feature ibus:
+[cmake] 
+[cmake]   sudo apt install libibus-1.0-dev
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] -- Configuring arm64-linux
+[cmake] CMake Error at scripts/cmake/vcpkg_execute_required_process.cmake:127 (message):
+[cmake]     Command failed: /usr/bin/ninja -v
+[cmake]     Working Directory: /usr/local/vcpkg/buildtrees/sdl3/arm64-linux-rel/vcpkg-parallel-configure
+[cmake]     Error code: 1
+[cmake]     See logs for more information:
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-dbg-CMakeCache.txt.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-rel-CMakeCache.txt.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-dbg-CMakeConfigureLog.yaml.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-rel-CMakeConfigureLog.yaml.log
+[cmake]       /usr/local/vcpkg/buildtrees/sdl3/config-arm64-linux-out.log
+[cmake] 
+[cmake] Call Stack (most recent call first):
+[cmake]   /workspaces/love2d-love/build/vcpkg_installed/arm64-linux/share/vcpkg-cmake/vcpkg_cmake_configure.cmake:269 (vcpkg_execute_required_process)
+[cmake]   ports/sdl3/portfile.cmake:58 (vcpkg_cmake_configure)
+[cmake]   scripts/ports.cmake:206 (include)
+[cmake] 
+[cmake] 
+[cmake] error: building sdl3:arm64-linux failed with: BUILD_FAILED
+[cmake] See https://learn.microsoft.com/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli for more information.
+[cmake] Elapsed time to handle sdl3:arm64-linux: 7.5 s
+[cmake] Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
+[cmake] Then check for known issues at:
+[cmake]   https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+sdl3
+[cmake] You can submit a new issue at:
+[cmake]   https://github.com/microsoft/vcpkg/issues/new?title=%5Bsdl3%5D%20build%20error%20on%20arm64-linux&body=Copy%20issue%20body%20from%20%2Fworkspaces%2Flove2d-love%2Fbuild%2Fvcpkg_installed%2Fvcpkg%2Fissue_body.md
+[cmake] You can also submit an issue by running (GitHub CLI must be installed):
+[cmake]   /usr/bin/gh issue create -R microsoft/vcpkg --title "[sdl3] Build failure on arm64-linux" --body-file /workspaces/love2d-love/build/vcpkg_installed/vcpkg/issue_body.md
+[cmake] -- Running vcpkg install - failed
+[cmake] CMake Error at /usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake:984 (message):
+[cmake]   vcpkg install failed.  See logs for more information:
+[cmake]   /workspaces/love2d-love/build/vcpkg-manifest-install.log
+[cmake] Call Stack (most recent call first):
+[cmake]   /opt/cmake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:146 (include)
+[cmake]   CMakeLists.txt:28 (project)
+[cmake] 
+[cmake] 
+[cmake] CMake Error: CMake was unable to find a build program corresponding to "Ninja".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+[cmake] -- Configuring incomplete, errors occurred!
+[proc] The command: /usr/local/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_TOOLCHAIN_FILE:STRING=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-16 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++-16 --no-warn-unused-cli -S /workspaces/love2d-love -B /workspaces/love2d-love/build -G Ninja exited with code: 1
+
+----

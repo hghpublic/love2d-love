@@ -1,0 +1,475 @@
+love.conf
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+ALSA lib confmisc.c:855:(parse_card) [error.core] cannot find card '0'
+ALSA lib conf.c:5211:(_snd_config_evaluate) [error.core] function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) [error.core] error evaluating strings
+ALSA lib conf.c:5211:(_snd_config_evaluate) [error.core] function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) [error.core] error evaluating name
+ALSA lib conf.c:5211:(_snd_config_evaluate) [error.core] function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5734:(snd_config_expand) [error.core] Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) [error.pcm] Unknown PCM default
+Could not open device.
+--all
+
+love.audio.testmodule.start
+  love.audio.RecordingDevice()              ==> SKIP - 0.006s (0/0) - method skipped [cant test this works: no recording devices found]
+  love.audio.Source()                       ==> FAIL - 0.003s (36/48) - code failed - (tests/audio.lua:169: attempt to index local 'filter' (a nil value)nil)
+  love.audio.Source()                       ==> assert 9 [check clone stereo seconds] failed - value '-1' out of range '0-0.1'
+  love.audio.Source()                       ==> assert 13 [check now playing] failed - expected 'true' got 'false'
+  love.audio.Source()                       ==> assert 15 [check seek/tell] failed - expected '0.01' got '0'
+  love.audio.Source()                       ==> assert 25 [check mono src] failed - expected '1' got '2'
+  love.audio.Source()                       ==> assert 26 [check mono seconds] failed - expected '2927' got '-1'
+  love.audio.Source()                       ==> assert 27 [check mono type] failed - expected 'stream' got 'static'
+  love.audio.Source()                       ==> assert 35 [check direction z] failed - expected '-1' got '-8.8592652440318e+36'
+  love.audio.Source()                       ==> assert 39 [check pos z] failed - expected '-8.8592652440318e+36' got '3'
+  love.audio.Source()                       ==> assert 42 [check velocity x] failed - expected '-8.8592652440318e+36' got '4'
+  love.audio.Source()                       ==> assert 47 [check queued sound] failed - expected 'true' got 'false'
+  love.audio.Source()                       ==> assert 48 [check filter applied] failed - expected 'true' got 'false'
+  love.audio.getActiveEffects()             ==> FAIL - 0.002s (1/3) - assert 2 [check 1 effect running] failed - (expected '1' got '0')
+  love.audio.getActiveEffects()             ==> assert 3 [check effect details] failed - expected 'testeffect' got 'nil'
+  love.audio.getActiveSourceCount()         ==> FAIL - 0.003s (2/3) - assert 3 [check now active] failed - (expected '1' got '0')
+  love.audio.getDistanceModel()             ==> FAIL - 0.002s (2/3) - assert 2 [check default value] failed - (expected 'inverseclamped' got 'none')
+  love.audio.getDopplerScale()              ==> FAIL - 0.002s (1/2) - assert 2 [check setting to 0] failed - (expected '0' got '1')
+  love.audio.getEffect()                    ==> FAIL - 0.002s (1/2) - code failed - (tests/audio.lua:268: attempt to index a nil valuenil)
+  love.audio.getMaxSceneEffects()           ==> PASS - 0.002s (1/1)
+  love.audio.getMaxSourceEffects()          ==> PASS - 0.002s (1/1)
+  love.audio.getOrientation()               ==> PASS - 0.002s (6/6)
+  love.audio.getPlaybackDevice()            ==> PASS - 0.002s (2/2)
+  love.audio.getPlaybackDevices()           ==> PASS - 0.002s (2/2)
+  love.audio.getPosition()                  ==> PASS - 0.002s (3/3)
+  love.audio.getRecordingDevices()          ==> PASS - 0.002s (1/1)
+  love.audio.getVelocity()                  ==> PASS - 0.002s (3/3)
+  love.audio.getVolume()                    ==> PASS - 0.002s (1/1)
+  love.audio.isEffectsSupported()           ==> PASS - 0.002s (1/1)
+  love.audio.newQueueableSource()           ==> PASS - 0.002s (3/3)
+  love.audio.newSource()                    ==> PASS - 0.002s (6/6)
+  love.audio.pause()                        ==> FAIL - 0.002s (1/2) - assert 2 [check 1 paused] failed - (expected '1' got '0')
+  love.audio.play()                         ==> FAIL - 0.002s (0/1) - assert 1 [check something playing] failed - (expected 'true' got 'false')
+  love.audio.setDistanceModel()             ==> PASS - 0.002s (7/7)
+  love.audio.setDopplerScale()              ==> FAIL - 0.002s (1/2) - assert 1 [check set to 0] failed - (expected '0' got '1')
+  love.audio.setEffect()                    ==> FAIL - 0.002s (0/1) - code failed - (tests/audio.lua:434: attempt to index local 'settings' (a nil value)nil)
+  love.audio.setMixWithSystem()             ==> PASS - 0.002s (1/1)
+  love.audio.setOrientation()               ==> PASS - 0.002s (6/6)
+  love.audio.setPlaybackDevice()            ==> FAIL - 0.002s (2/4) - assert 2 [check blank device is fine] failed - (expected 'true' got 'false')
+  love.audio.setPlaybackDevice()            ==> assert 4 [check existing device is fine] failed - expected 'true' got 'false'
+  love.audio.setPosition()                  ==> PASS - 0.002s (3/3)
+  love.audio.setVelocity()                  ==> PASS - 0.002s (3/3)
+  love.audio.setVolume()                    ==> PASS - 0.002s (1/1)
+  love.audio.stop()                         ==> FAIL - 0.003s (1/2) - assert 1 [check is playing] failed - (expected 'true' got 'false')
+love.audio.testmodule.end
+18 PASSED || 12 FAILED || 1 SKIPPED || 0.066s
+
+love.data.testmodule.start
+  love.data.ByteData()                      ==> PASS - 0.002s (11/11)
+  love.data.CompressedData()                ==> PASS - 0.002s (12/12)
+  love.data.compress()                      ==> PASS - 0.002s (62/62)
+  love.data.decode()                        ==> PASS - 0.002s (4/4)
+  love.data.decompress()                    ==> PASS - 0.002s (18/18)
+  love.data.encode()                        ==> PASS - 0.002s (15/15)
+  love.data.getPackedSize()                 ==> PASS - 0.002s (3/3)
+  love.data.hash()                          ==> PASS - 0.002s (12/12)
+  love.data.newByteData()                   ==> PASS - 0.002s (3/3)
+  love.data.newDataView()                   ==> PASS - 0.002s (3/3)
+  love.data.pack()                          ==> PASS - 0.002s (4/4)
+  love.data.unpack()                        ==> PASS - 0.002s (3/3)
+love.data.testmodule.end
+12 PASSED || 0 FAILED || 0 SKIPPED || 0.023s
+
+love.event.testmodule.start
+  love.event.clear()                        ==> PASS - 0.002s (1/1)
+  love.event.poll()                         ==> PASS - 0.002s (1/1)
+  love.event.pump()                         ==> SKIP - 0.002s (0/0) - method skipped [used internally]
+  love.event.push()                         ==> PASS - 0.002s (1/1)
+  love.event.quit()                         ==> PASS - 0.002s (1/1)
+  love.event.wait()                         ==> SKIP - 0.002s (0/0) - method skipped [used internally]
+love.event.testmodule.end
+4 PASSED || 0 FAILED || 2 SKIPPED || 0.012s
+
+love.filesystem.testmodule.start
+  love.filesystem.File()                    ==> PASS - 0.005s (36/36)
+  love.filesystem.FileData()                ==> PASS - 0.002s (12/12)
+  love.filesystem.append()                  ==> PASS - 0.003s (6/6)
+  love.filesystem.areSymlinksEnabled()      ==> PASS - 0.002s (1/1)
+  love.filesystem.createDirectory()         ==> PASS - 0.002s (3/3)
+  love.filesystem.getAppdataDirectory()     ==> PASS - 0.002s (1/1)
+  love.filesystem.getCRequirePath()         ==> PASS - 0.002s (1/1)
+  love.filesystem.getDirectoryItems()       ==> PASS - 0.004s (2/2)
+  love.filesystem.getFullCommonPath()       ==> PASS - 0.002s (7/7)
+  love.filesystem.getIdentity()             ==> PASS - 0.002s (1/1)
+  love.filesystem.getInfo()                 ==> PASS - 0.003s (4/4)
+  love.filesystem.getRealDirectory()        ==> PASS - 0.003s (1/1)
+  love.filesystem.getRequirePath()          ==> PASS - 0.002s (1/1)
+  love.filesystem.getSaveDirectory()        ==> PASS - 0.002s (1/1)
+  love.filesystem.getSource()               ==> SKIP - 0.002s (0/0) - method skipped [used internally]
+  love.filesystem.getSourceBaseDirectory()  ==> PASS - 0.002s (1/1)
+  love.filesystem.getUserDirectory()        ==> PASS - 0.002s (1/1)
+  love.filesystem.getWorkingDirectory()     ==> PASS - 0.002s (1/1)
+  love.filesystem.isFused()                 ==> PASS - 0.002s (1/1)
+  love.filesystem.lines()                   ==> PASS - 0.003s (6/6)
+  love.filesystem.load()                    ==> PASS - 0.003s (6/6)
+  love.filesystem.mount()                   ==> PASS - 0.003s (5/5)
+  love.filesystem.mountCommonPath()         ==> PASS - 0.002s (6/6)
+  love.filesystem.mountFullPath()           ==> PASS - 0.002s (3/3)
+  love.filesystem.newFileData()             ==> PASS - 0.002s (1/1)
+  love.filesystem.openFile()                ==> PASS - 0.002s (4/4)
+  love.filesystem.read()                    ==> PASS - 0.002s (6/6)
+  love.filesystem.remove()                  ==> PASS - 0.003s (5/5)
+  love.filesystem.setCRequirePath()         ==> PASS - 0.002s (1/1)
+  love.filesystem.setIdentity()             ==> PASS - 0.002s (1/1)
+  love.filesystem.setRequirePath()          ==> PASS - 0.002s (1/1)
+  love.filesystem.setSource()               ==> SKIP - 0.002s (0/0) - method skipped [used internally]
+  love.filesystem.unmount()                 ==> PASS - 0.003s (2/2)
+  love.filesystem.unmountFullPath()         ==> PASS - 0.002s (2/2)
+  love.filesystem.write()                   ==> PASS - 0.004s (3/3)
+love.filesystem.testmodule.end
+33 PASSED || 0 FAILED || 2 SKIPPED || 0.086s
+
+love.font.testmodule.start
+  love.font.GlyphData()                     ==> PASS - 0.003s (17/17)
+  love.font.Rasterizer()                    ==> PASS - 0.002s (13/13)
+  love.font.newBMFontRasterizer()           ==> PASS - 0.003s (3/3)
+  love.font.newGlyphData()                  ==> PASS - 0.003s (3/3)
+  love.font.newImageRasterizer()            ==> PASS - 0.003s (3/3)
+  love.font.newRasterizer()                 ==> PASS - 0.002s (3/3)
+  love.font.newTrueTypeRasterizer()         ==> PASS - 0.003s (6/6)
+love.font.testmodule.end
+7 PASSED || 0 FAILED || 0 SKIPPED || 0.018s
+
+love.graphics.testmodule.start
+  love.graphics.Buffer()                    ==> PASS - 0.003s (30/30)
+  love.graphics.Canvas()                    ==> PASS - 0.113s (40040/40040)
+  love.graphics.Font()                      ==> PASS - 0.006s (530/530)
+  love.graphics.Image()                     ==> PASS - 0.007s (4138/4138)
+  love.graphics.Mesh()                      ==> PASS - 0.002s (49/49)
+  love.graphics.ParticleSystem()            ==> PASS - 0.012s (4183/4183)
+  love.graphics.Quad()                      ==> PASS - 0.004s (4103/4103)
+  love.graphics.Shader()                    ==> PASS - 0.055s (776/776)
+  love.graphics.ShaderStorageBuffer()       ==> PASS - 0.002s (1/1)
+  love.graphics.SpriteBatch()               ==> PASS - 0.029s (20499/20499)
+  love.graphics.Text()                      ==> PASS - 0.005s (4110/4110)
+  love.graphics.Video()                     ==> FAIL - 0.473s (250022/250024) - assert 22 [check video playing for 0.25s] failed - (value '0' out of range '0.2-0.35')
+  love.graphics.Video()                     ==> assert 23 [check video seeking] failed - expected '0.2' got '0'
+  love.graphics.applyTransform()            ==> PASS - 0.003s (256/256)
+  love.graphics.arc()                       ==> PASS - 0.006s (3072/3072)
+  love.graphics.captureScreenshot()         ==> PASS - 0.063s (86403/86403)
+  love.graphics.circle()                    ==> PASS - 0.003s (1024/1024)
+  love.graphics.clear()                     ==> PASS - 0.003s (256/256)
+  love.graphics.discard()                   ==> SKIP - 0.002s (0/0) - method skipped [cant test this worked]
+  love.graphics.draw()                      ==> PASS - 0.003s (1024/1024)
+  love.graphics.drawInstanced()             ==> PASS - 0.047s (4096/4096)
+  love.graphics.drawLayer()                 ==> PASS - 0.006s (4096/4096)
+  love.graphics.ellipse()                   ==> PASS - 0.003s (1024/1024)
+  love.graphics.flushBatch()                ==> PASS - 0.002s (1/1)
+  love.graphics.getBackgroundColor()        ==> PASS - 0.002s (8/8)
+  love.graphics.getBlendMode()              ==> PASS - 0.002s (4/4)
+  love.graphics.getCanvas()                 ==> PASS - 0.002s (4/4)
+  love.graphics.getColor()                  ==> PASS - 0.002s (8/8)
+  love.graphics.getColorMask()              ==> PASS - 0.002s (8/8)
+  love.graphics.getDPIScale()               ==> PASS - 0.002s (1/1)
+  love.graphics.getDefaultFilter()          ==> PASS - 0.002s (3/3)
+  love.graphics.getDepthMode()              ==> PASS - 0.002s (2/2)
+  love.graphics.getDimensions()             ==> PASS - 0.002s (2/2)
+  love.graphics.getFont()                   ==> PASS - 0.002s (3/3)
+  love.graphics.getFrontFaceWinding()       ==> PASS - 0.002s (2/2)
+  love.graphics.getHeight()                 ==> PASS - 0.002s (1/1)
+  love.graphics.getLineJoin()               ==> PASS - 0.002s (2/2)
+  love.graphics.getLineStyle()              ==> PASS - 0.002s (2/2)
+  love.graphics.getLineWidth()              ==> PASS - 0.002s (2/2)
+  love.graphics.getMeshCullMode()           ==> PASS - 0.002s (2/2)
+  love.graphics.getPixelDimensions()        ==> PASS - 0.002s (2/2)
+  love.graphics.getPixelHeight()            ==> PASS - 0.002s (1/1)
+  love.graphics.getPixelWidth()             ==> PASS - 0.002s (1/1)
+  love.graphics.getPointSize()              ==> PASS - 0.002s (2/2)
+  love.graphics.getRendererInfo()           ==> PASS - 0.002s (4/4)
+  love.graphics.getScissor()                ==> PASS - 0.002s (8/8)
+  love.graphics.getShader()                 ==> PASS - 0.002s (1/1)
+  love.graphics.getStackDepth()             ==> PASS - 0.002s (4/4)
+  love.graphics.getStats()                  ==> PASS - 0.002s (7/7)
+  love.graphics.getStencilState()           ==> PASS - 0.002s (6/6)
+  love.graphics.getSupported()              ==> PASS - 0.002s (12/12)
+  love.graphics.getSystemLimits()           ==> PASS - 0.002s (13/13)
+  love.graphics.getTextureFormats()         ==> PASS - 0.002s (84/84)
+  love.graphics.getTextureTypes()           ==> PASS - 0.002s (4/4)
+  love.graphics.getWidth()                  ==> PASS - 0.002s (1/1)
+  love.graphics.intersectScissor()          ==> PASS - 0.003s (256/256)
+  love.graphics.inverseTransformPoint()     ==> PASS - 0.002s (4/4)
+  love.graphics.isActive()                  ==> PASS - 0.002s (1/1)
+  love.graphics.isGammaCorrect()            ==> PASS - 0.002s (1/1)
+  love.graphics.isWireframe()               ==> PASS - 0.002s (2/2)
+  love.graphics.line()                      ==> PASS - 0.003s (256/256)
+  love.graphics.newArrayImage()             ==> PASS - 0.003s (3/3)
+  love.graphics.newCanvas()                 ==> PASS - 0.002s (6/6)
+  love.graphics.newCubeImage()              ==> PASS - 0.004s (3/3)
+  love.graphics.newFont()                   ==> PASS - 0.003s (6/6)
+  love.graphics.newImage()                  ==> PASS - 0.002s (3/3)
+  love.graphics.newImageFont()              ==> PASS - 0.002s (3/3)
+  love.graphics.newMesh()                   ==> PASS - 0.002s (3/3)
+  love.graphics.newParticleSystem()         ==> PASS - 0.002s (3/3)
+  love.graphics.newQuad()                   ==> PASS - 0.002s (3/3)
+  love.graphics.newShader()                 ==> PASS - 0.014s (3/3)
+  love.graphics.newSpriteBatch()            ==> PASS - 0.002s (3/3)
+  love.graphics.newTextBatch()              ==> PASS - 0.002s (3/3)
+  love.graphics.newTexture()                ==> PASS - 0.002s (3/3)
+  love.graphics.newVideo()                  ==> PASS - 0.003s (3/3)
+  love.graphics.newVolumeImage()            ==> PASS - 0.003s (3/3)
+  love.graphics.origin()                    ==> PASS - 0.003s (256/256)
+  love.graphics.points()                    ==> PASS - 0.003s (256/256)
+  love.graphics.polygon()                   ==> PASS - 0.003s (256/256)
+  love.graphics.pop()                       ==> PASS - 0.002s (256/256)
+  love.graphics.print()                     ==> PASS - 0.003s (256/256)
+  love.graphics.printf()                    ==> PASS - 0.003s (1024/1024)
+  love.graphics.push()                      ==> PASS - 0.003s (256/256)
+  love.graphics.rectangle()                 ==> PASS - 0.003s (512/512)
+  love.graphics.replaceTransform()          ==> PASS - 0.002s (256/256)
+  love.graphics.reset()                     ==> PASS - 0.002s (3/3)
+  love.graphics.rotate()                    ==> PASS - 0.002s (256/256)
+  love.graphics.scale()                     ==> PASS - 0.003s (256/256)
+  love.graphics.setBackgroundColor()        ==> PASS - 0.002s (4/4)
+  love.graphics.setBlendMode()              ==> PASS - 0.003s (256/256)
+  love.graphics.setCanvas()                 ==> PASS - 0.005s (323/323)
+  love.graphics.setColor()                  ==> PASS - 0.002s (260/260)
+  love.graphics.setColorMask()              ==> PASS - 0.003s (260/260)
+  love.graphics.setDefaultFilter()          ==> PASS - 0.002s (3/3)
+  love.graphics.setDepthMode()              ==> PASS - 0.002s (8/8)
+  love.graphics.setFont()                   ==> PASS - 0.002s (256/256)
+  love.graphics.setFrontFaceWinding()       ==> PASS - 0.008s (258/258)
+  love.graphics.setLineJoin()               ==> PASS - 0.002s (256/256)
+  love.graphics.setLineStyle()              ==> PASS - 0.002s (256/256)
+  love.graphics.setLineWidth()              ==> PASS - 0.002s (256/256)
+  love.graphics.setMeshCullMode()           ==> PASS - 0.002s (3/3)
+  love.graphics.setScissor()                ==> PASS - 0.002s (256/256)
+  love.graphics.setShader()                 ==> PASS - 0.011s (256/256)
+  love.graphics.setStencilState()           ==> PASS - 0.003s (256/256)
+  love.graphics.setWireframe()              ==> PASS - 0.002s (256/256)
+  love.graphics.shear()                     ==> PASS - 0.003s (512/512)
+  love.graphics.transformPoint()            ==> PASS - 0.002s (4/4)
+  love.graphics.translate()                 ==> PASS - 0.002s (256/256)
+  love.graphics.validateShader()            ==> PASS - 0.034s (2/2)
+love.graphics.testmodule.end
+106 PASSED || 1 FAILED || 1 SKIPPED || 1.101s
+
+love.image.testmodule.start
+  love.image.CompressedImageData()          ==> PASS - 0.002s (13/13)
+  love.image.ImageData()                    ==> PASS - 0.004s (17/17)
+  love.image.isCompressed()                 ==> PASS - 0.002s (1/1)
+  love.image.newCompressedData()            ==> PASS - 0.002s (3/3)
+  love.image.newImageData()                 ==> PASS - 0.002s (6/6)
+love.image.testmodule.end
+5 PASSED || 0 FAILED || 0 SKIPPED || 0.012s
+
+love.joystick.testmodule.start
+  love.joystick.getGamepadMappingString()   ==> PASS - 0.002s (1/1)
+  love.joystick.getJoystickCount()          ==> PASS - 0.002s (1/1)
+  love.joystick.getJoysticks()              ==> PASS - 0.002s (1/1)
+  love.joystick.loadGamepadMappings()       ==> PASS - 0.004s (1/1)
+  love.joystick.saveGamepadMappings()       ==> PASS - 0.005s (1/1)
+  love.joystick.setGamepadMapping()         ==> PASS - 0.002s (24/24)
+love.joystick.testmodule.end
+6 PASSED || 0 FAILED || 0 SKIPPED || 0.016s
+
+love.keyboard.testmodule.start
+  love.keyboard.getKeyFromScancode()        ==> PASS - 0.002s (1/1)
+  love.keyboard.getScancodeFromKey()        ==> PASS - 0.002s (1/1)
+  love.keyboard.hasKeyRepeat()              ==> PASS - 0.002s (1/1)
+  love.keyboard.hasScreenKeyboard()         ==> PASS - 0.002s (1/1)
+  love.keyboard.hasTextInput()              ==> PASS - 0.002s (1/1)
+  love.keyboard.isDown()                    ==> PASS - 0.002s (1/1)
+  love.keyboard.isModifierActive()          ==> PASS - 0.002s (4/4)
+  love.keyboard.isScancodeDown()            ==> PASS - 0.002s (1/1)
+  love.keyboard.setKeyRepeat()              ==> PASS - 0.002s (1/1)
+  love.keyboard.setTextInput()              ==> PASS - 0.002s (1/1)
+love.keyboard.testmodule.end
+10 PASSED || 0 FAILED || 0 SKIPPED || 0.018s
+
+love.love.testmodule.start
+  love.love.errhand()                       ==> PASS - 0.002s (1/1)
+  love.love.getVersion()                    ==> PASS - 0.002s (4/4)
+  love.love.hasDeprecationOutput()          ==> PASS - 0.002s (1/1)
+  love.love.isVersionCompatible()           ==> PASS - 0.002s (1/1)
+  love.love.run()                           ==> PASS - 0.002s (1/1)
+  love.love.setDeprecationOutput()          ==> PASS - 0.002s (2/2)
+love.love.testmodule.end
+6 PASSED || 0 FAILED || 0 SKIPPED || 0.010s
+
+love.math.testmodule.start
+  love.math.BezierCurve()                   ==> PASS - 0.002s (31/31)
+  love.math.RandomGenerator()               ==> PASS - 0.002s (10/10)
+  love.math.Transform()                     ==> PASS - 0.002s (14/14)
+  love.math.colorFromBytes()                ==> PASS - 0.002s (12/12)
+  love.math.colorToBytes()                  ==> PASS - 0.002s (12/12)
+  love.math.gammaToLinear()                 ==> PASS - 0.001s (3/3)
+  love.math.getRandomSeed()                 ==> PASS - 0.002s (2/2)
+  love.math.getRandomState()                ==> PASS - 0.002s (1/1)
+  love.math.isConvex()                      ==> PASS - 0.002s (2/2)
+  love.math.linearToGamma()                 ==> PASS - 0.002s (3/3)
+  love.math.newBezierCurve()                ==> PASS - 0.002s (3/3)
+  love.math.newRandomGenerator()            ==> PASS - 0.002s (3/3)
+  love.math.newTransform()                  ==> PASS - 0.002s (3/3)
+  love.math.perlinNoise()                   ==> PASS - 0.002s (4/4)
+  love.math.random()                        ==> PASS - 0.002s (3/3)
+  love.math.randomNormal()                  ==> PASS - 0.002s (1/1)
+  love.math.setRandomSeed()                 ==> PASS - 0.002s (2/2)
+  love.math.setRandomState()                ==> PASS - 0.002s (1/1)
+  love.math.simplexNoise()                  ==> PASS - 0.002s (4/4)
+  love.math.triangulate()                   ==> PASS - 0.002s (2/2)
+love.math.testmodule.end
+20 PASSED || 0 FAILED || 0 SKIPPED || 0.035s
+
+love.mouse.testmodule.start
+  love.mouse.getCursor()                    ==> PASS - 0.002s (4/4)
+  love.mouse.getPosition()                  ==> PASS - 0.002s (2/2)
+  love.mouse.getRelativeMode()              ==> PASS - 0.002s (2/2)
+  love.mouse.getSystemCursor()              ==> PASS - 0.002s (4/4)
+  love.mouse.getX()                         ==> PASS - 0.002s (2/2)
+  love.mouse.getY()                         ==> PASS - 0.002s (2/2)
+  love.mouse.isCursorSupported()            ==> PASS - 0.001s (1/1)
+  love.mouse.isDown()                       ==> PASS - 0.002s (1/1)
+  love.mouse.isGrabbed()                    ==> PASS - 0.002s (1/1)
+  love.mouse.isVisible()                    ==> PASS - 0.002s (2/2)
+  love.mouse.newCursor()                    ==> PASS - 0.002s (3/3)
+  love.mouse.setCursor()                    ==> PASS - 0.002s (4/4)
+  love.mouse.setGrabbed()                   ==> PASS - 0.002s (2/2)
+  love.mouse.setPosition()                  ==> PASS - 0.002s (4/4)
+  love.mouse.setRelativeMode()              ==> PASS - 0.002s (2/2)
+  love.mouse.setVisible()                   ==> PASS - 0.002s (2/2)
+  love.mouse.setX()                         ==> PASS - 0.002s (2/2)
+  love.mouse.setY()                         ==> PASS - 0.002s (2/2)
+love.mouse.testmodule.end
+18 PASSED || 0 FAILED || 0 SKIPPED || 0.033s
+
+love.physics.testmodule.start
+  love.physics.Body()                       ==> PASS - 0.002s (90/90)
+  love.physics.Contact()                    ==> PASS - 0.002s (23/23)
+  love.physics.Joint()                      ==> PASS - 0.002s (19/19)
+  love.physics.Shape()                      ==> PASS - 0.002s (55/55)
+  love.physics.World()                      ==> PASS - 0.002s (37/37)
+  love.physics.getDistance()                ==> PASS - 0.002s (1/1)
+  love.physics.getMeter()                   ==> PASS - 0.002s (1/1)
+  love.physics.newBody()                    ==> PASS - 0.002s (3/3)
+  love.physics.newChainShape()              ==> PASS - 0.002s (3/3)
+  love.physics.newCircleShape()             ==> PASS - 0.002s (3/3)
+  love.physics.newDistanceJoint()           ==> PASS - 0.002s (3/3)
+  love.physics.newEdgeShape()               ==> PASS - 0.002s (3/3)
+  love.physics.newFrictionJoint()           ==> PASS - 0.002s (3/3)
+  love.physics.newGearJoint()               ==> PASS - 0.002s (3/3)
+  love.physics.newMotorJoint()              ==> PASS - 0.002s (3/3)
+  love.physics.newMouseJoint()              ==> PASS - 0.002s (3/3)
+  love.physics.newPolygonShape()            ==> PASS - 0.002s (3/3)
+  love.physics.newPrismaticJoint()          ==> PASS - 0.002s (3/3)
+  love.physics.newPulleyJoint()             ==> PASS - 0.002s (3/3)
+  love.physics.newRectangleShape()          ==> PASS - 0.002s (6/6)
+  love.physics.newRevoluteJoint()           ==> PASS - 0.002s (3/3)
+  love.physics.newRopeJoint()               ==> PASS - 0.002s (3/3)
+  love.physics.newWeldJoint()               ==> PASS - 0.002s (3/3)
+  love.physics.newWheelJoint()              ==> PASS - 0.002s (3/3)
+  love.physics.newWorld()                   ==> PASS - 0.002s (3/3)
+  love.physics.setMeter()                   ==> PASS - 0.002s (2/2)
+love.physics.testmodule.end
+26 PASSED || 0 FAILED || 0 SKIPPED || 0.045s
+
+love.sensor.testmodule.start
+  love.sensor.getData()                     ==> SKIP - 0.002s (0/0) - method skipped [neither accelerometer nor gyroscope are supported in this system]
+  love.sensor.getName()                     ==> SKIP - 0.002s (0/0) - method skipped [neither accelerometer nor gyroscope are supported in this system]
+  love.sensor.hasSensor()                   ==> PASS - 0.002s (2/2)
+  love.sensor.isEnabled()                   ==> SKIP - 0.002s (0/0) - method skipped [neither accelerometer nor gyroscope are supported in this system]
+love.sensor.testmodule.end
+1 PASSED || 0 FAILED || 3 SKIPPED || 0.007s
+
+love.sound.testmodule.start
+  love.sound.Decoder()                      ==> PASS - 0.003s (14/14)
+  love.sound.SoundData()                    ==> PASS - 0.005s (22/22)
+  love.sound.newDecoder()                   ==> PASS - 0.002s (3/3)
+  love.sound.newSoundData()                 ==> PASS - 0.002s (6/6)
+love.sound.testmodule.end
+4 PASSED || 0 FAILED || 0 SKIPPED || 0.012s
+
+love.system.testmodule.start
+  love.system.getClipboardText()            ==> PASS - 0.002s (1/1)
+  love.system.getMemorySize()               ==> PASS - 0.001s (1/1)
+  love.system.getOS()                       ==> PASS - 0.002s (1/1)
+  love.system.getPowerInfo()                ==> PASS - 0.002s (1/1)
+  love.system.getPreferredLocales()         ==> PASS - 0.002s (2/2)
+  love.system.getProcessorCount()           ==> PASS - 0.002s (1/1)
+  love.system.hasBackgroundMusic()          ==> PASS - 0.002s (1/1)
+  love.system.openURL()                     ==> SKIP - 0.002s (0/0) - method skipped [cant test this worked]
+  love.system.setClipboardText()            ==> PASS - 0.002s (1/1)
+  love.system.vibrate()                     ==> SKIP - 0.002s (0/0) - method skipped [cant test this worked]
+love.system.testmodule.end
+8 PASSED || 0 FAILED || 2 SKIPPED || 0.017s
+
+love.thread.testmodule.start
+  love.thread.Channel()                     ==> PASS - 0.219s (10/10)
+  love.thread.Thread()                      ==> PASS - 0.008s (7/7)
+  love.thread.getChannel()                  ==> PASS - 0.002s (3/3)
+  love.thread.newChannel()                  ==> PASS - 0.002s (3/3)
+  love.thread.newThread()                   ==> PASS - 0.003s (3/3)
+love.thread.testmodule.end
+5 PASSED || 0 FAILED || 0 SKIPPED || 0.234s
+
+love.timer.testmodule.start
+  love.timer.getAverageDelta()              ==> PASS - 0.002s (1/1)
+  love.timer.getDelta()                     ==> PASS - 0.002s (1/1)
+  love.timer.getFPS()                       ==> PASS - 0.002s (1/1)
+  love.timer.getTime()                      ==> PASS - 0.107s (1/1)
+  love.timer.sleep()                        ==> PASS - 0.104s (1/1)
+  love.timer.step()                         ==> PASS - 0.003s (1/1)
+love.timer.testmodule.end
+6 PASSED || 0 FAILED || 0 SKIPPED || 0.221s
+
+love.touch.testmodule.start
+  love.touch.getPosition()                  ==> PASS - 0.002s (2/2)
+  love.touch.getPressure()                  ==> PASS - 0.002s (2/2)
+  love.touch.getTouches()                   ==> PASS - 0.003s (1/1)
+love.touch.testmodule.end
+3 PASSED || 0 FAILED || 0 SKIPPED || 0.007s
+
+love.video.testmodule.start
+  love.video.VideoStream()                  ==> PASS - 0.005s (9/9)
+  love.video.newVideoStream()               ==> PASS - 0.004s (3/3)
+love.video.testmodule.end
+2 PASSED || 0 FAILED || 0 SKIPPED || 0.009s
+
+love.window.testmodule.start
+  love.window.focus()                       ==> PASS - 0.002s (1/1)
+  love.window.fromPixels()                  ==> PASS - 0.002s (1/1)
+  love.window.getDPIScale()                 ==> PASS - 0.002s (1/1)
+  love.window.getDesktopDimensions()        ==> PASS - 0.002s (2/2)
+  love.window.getDisplayCount()             ==> PASS - 0.002s (1/1)
+  love.window.getDisplayName()              ==> PASS - 0.002s (1/1)
+  love.window.getDisplayOrientation()       ==> PASS - 0.003s (1/1)
+  love.window.getFullscreen()               ==> PASS - 0.038s (2/2)
+  love.window.getFullscreenModes()          ==> PASS - 0.002s (1/1)
+  love.window.getIcon()                     ==> PASS - 0.003s (2/2)
+  love.window.getMode()                     ==> PASS - 0.015s (3/3)
+  love.window.getPosition()                 ==> PASS - 0.016s (2/2)
+  love.window.getSafeArea()                 ==> PASS - 0.002s (4/4)
+  love.window.getTitle()                    ==> PASS - 0.002s (1/1)
+  love.window.getVSync()                    ==> PASS - 0.002s (1/1)
+  love.window.hasFocus()                    ==> PASS - 0.002s (1/1)
+  love.window.hasMouseFocus()               ==> PASS - 0.002s (1/1)
+  love.window.isDisplaySleepEnabled()       ==> PASS - 0.002s (3/3)
+  love.window.isMaximized()                 ==> PASS - 0.078s (2/2)
+  love.window.isMinimized()                 ==> PASS - 0.057s (2/2)
+  love.window.isOccluded()                  ==> PASS - 0.002s (1/1)
+  love.window.isOpen()                      ==> PASS - 0.002s (1/1)
+  love.window.isVisible()                   ==> PASS - 0.002s (1/1)
+  love.window.maximize()                    ==> PASS - 0.075s (2/2)
+  love.window.minimize()                    ==> PASS - 0.055s (2/2)
+  love.window.requestAttention()            ==> SKIP - 0.002s (0/0) - method skipped [cant test this worked]
+  love.window.restore()                     ==> PASS - 0.053s (1/1)
+  love.window.setDisplaySleepEnabled()      ==> PASS - 0.002s (2/2)
+  love.window.setFullscreen()               ==> PASS - 0.050s (2/2)
+  love.window.setIcon()                     ==> PASS - 0.003s (1/1)
+  love.window.setMode()                     ==> PASS - 0.043s (4/4)
+  love.window.setPosition()                 ==> PASS - 0.022s (2/2)
+  love.window.setTitle()                    ==> PASS - 0.002s (1/1)
+  love.window.setVSync()                    ==> PASS - 0.002s (1/1)
+  love.window.showMessageBox()              ==> SKIP - 0.002s (0/0) - method skipped [cant test this worked]
+  love.window.toPixels()                    ==> PASS - 0.002s (1/1)
+  love.window.updateMode()                  ==> PASS - 0.056s (4/4)
+love.window.testmodule.end
+35 PASSED || 0 FAILED || 2 SKIPPED || 0.612s
+
+FINISHED - 2.594s
+
+335 PASSED || 13 FAILED || 13 SKIPPED

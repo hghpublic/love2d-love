@@ -1,0 +1,27 @@
+= shadertoy
+
+== Stash
+
+https://stackoverflow.com/questions/34859701/how-do-shadertoys-audio-shaders-work
+
+https://www.shadertoy.com/view/ssjyDD
+
+https://www.shadertoy.com/view/tdSyWV
+
+https://www.shadertoy.com/view/tsByWV
+
+https://gist.github.com/soulthreads/2efe50da4be1fb5f7ab60ff14ca434b8
+
+https://www.shadertoy.com/view/Xds3Rr
+
+https://webaudio.github.io/web-audio-api/#fft-windowing-and-smoothing-over-time
+
+https://www.shadertoy.com/view/fdBcRV
+
+
+https://magicmusicvisuals.com/forums/viewtopic.php?t=277
+
+https://shaderboi.net/doc/README.html
+
+
+https://www.shadertoy.com/view/4dySRc

@@ -1,0 +1,97 @@
+= Shaders
+
+== Chain shaders in LÖVE
+
+Prompt::
++
+----
+love2d chain shaders canvas
+----
+
+To chain multiple shaders on a canvas in LÖVE, you need to use two ping-pong canvases. Draw your game to the first canvas, apply the first shader while drawing it to the second canvas, then alternate (ping-pong) these canvases for each subsequent shader in the chain before finally drawing the result to the screen. 
+
+=== Implementation Guide
+
+Create a ping-pong buffer technique where the output of one pass becomes the input for the next:
+
+. *Create Canvases*: Create two canvases of the same size.
+
+. *First Pass*: Set the first canvas, apply your first shader, and draw your game content.
+
+. *Shader Chain*: Loop through your remaining shaders. For each shader, set the second canvas, apply the shader, and draw the first canvas. Swap the canvases (Canvas 1 becomes Canvas 2, Canvas 2 becomes Canvas 1) and repeat.
+
+. *Final Draw*: Draw the last active canvas onto the screen with no active shader. 
+
+
+=== Code Example
+
+[source, lua]
+----
+function love.load()
+    -- 1. Create Ping-Pong canvases
+    local width, height = love.graphics.getDimensions()
+    canvasA = love.graphics.newCanvas(width, height)
+    canvasB = love.graphics.newCanvas(width, height)
+    
+    -- Load shaders
+    shader1 = love.graphics.newShader("shader1.glsl")
+    shader2 = love.graphics.newShader("shader2.glsl")
+end
+
+function love.draw()
+    -- Define the shader chain
+    local shaders = {shader1, shader2}
+    
+    -- Draw game objects to the initial canvas
+    love.graphics.setCanvas(canvasA)
+    love.graphics.clear()
+    drawGameObjects() -- Your actual drawing code
+    love.graphics.setCanvas()
+
+    -- Ping-pong variables
+    local currentCanvas = canvasA
+    local nextCanvas = canvasB
+
+    -- 2. Chain shaders sequentially
+    for i, shader in ipairs(shaders) do
+        love.graphics.setCanvas(nextCanvas)
+        love.graphics.clear()
+        
+        love.graphics.setShader(shader)
+        love.graphics.draw(currentCanvas)
+        love.graphics.setShader()
+        
+        -- Swap canvases for the next pass
+        currentCanvas, nextCanvas = nextCanvas, currentCanvas
+    end
+
+    -- 3. Draw final processed canvas to the screen
+    love.graphics.draw(currentCanvas, 0, 0)
+end
+
+function drawGameObjects()
+    -- Draw your scenes/sprites/shapes here
+    love.graphics.circle("fill", 400, 300, 100)
+end
+----
+
+If you want to optimize your project, let me know:
+
+* *How many shaders* you need to chain together
+* If you plan on using *dynamic parameters* (e.g., time, mouse position)
+* If you are looking for a *library to handle post-processing* automatically, such as `moonshine` or `POSTER`
+
+Let me know which option you'd like to explore next.
+
+
+== Stash
+
+[SOLVED] Canvas and shader issue
+
+https://love2d.org/forums/viewtopic.php?t=87699
+
+https://www.patreon.com/teamdogpit/posts/shader-tutorial-90048204
+
+https://thebookofshaders.com/06/
+
+https://github.com/vrld/moonshine/blob/master/sketch.lua

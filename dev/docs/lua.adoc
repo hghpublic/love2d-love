@@ -1,0 +1,28 @@
+= lua
+:toc:
+:sectnums:
+
+== Ubuntu
+
+https://wiki.ubuntuusers.de/Lua/
+
+[source, bash]
+----
+apt search lua5 | grep lua5
+sudo apt install lua5.5 
+
+lua5.5 -v    
+Lua 5.5.0  Copyright (C) 1994-2025 Lua.org, PUC-Rio
+
+
+lua -e 'print("Hello, world!")'
+Hello, world!
+----
+
+== Stash
+
+http://lua-users.org/
+
+https://en.wikipedia.org/wiki/Lua
+
+https://stevedonovan.github.io/lua-cookbook/index.html

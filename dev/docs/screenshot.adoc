@@ -1,0 +1,57 @@
+= screenshot
+
+== xwininfo
+----
+xwininfo 
+
+xwininfo: Please select the window about which you
+          would like information by clicking the
+          mouse in that window.
+
+xwininfo: Window id: 0xa00038 "LÖVE 12.0 (Bestest Friend) - OpenGL"
+
+  Absolute upper-left X:  561
+  Absolute upper-left Y:  237
+  Relative upper-left X:  0
+  Relative upper-left Y:  25
+  Width: 800
+  Height: 600
+  Depth: 32
+  Visual: 0x4d
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0xa00037 (not installed)
+  Bit Gravity State: ForgetGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +561+237  -559+237  -559-212  +561-212
+  -geometry 800x600+560+211
+----
+
+== scrot
+
+----
+WID=$(xwininfo | grep 'Window id:' | awk '{ print $4 }')
+
+xwininfo | grep 'Window id:' | awk '{ print $4 }'
+0xa00038
+(click into the window to capture)
+
+WID: X window ID to capture
+scrot -w <WID>              
+
+scrot -w 0xa00038
+----
+
+screenshot of window with focus::
++
+----
+scrot -u screenshot.png
+
+with border:
+scrot -ub test.png
+----

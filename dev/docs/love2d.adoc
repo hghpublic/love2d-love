@@ -1,0 +1,82 @@
+= LÖVE
+:toc:
+:sectnums:
+
+== LÖVE
+
+https://love2d.org/
+
+https://github.com/love2d/love
+
+https://love2d.org/wiki/Main_Page
+
+https://www.lua.org/manual/5.5/
+
+== Books
+
+=== Programming for Beginners with Lua and Love2D
+
+https://learning.oreilly.com/course/programming-for-beginners/9781806705757/
+
+https://github.com/PacktPublishing/Programming-for-Beginners-with-Lua-and-Love2D
+
+=== Integrate Lua with C++
+
+https://learning.oreilly.com/library/view/integrate-lua-with/9781805128618/
+
+
+== Examples
+
+https://love2d.org/wiki/examples.love
+
+https://github.com/love2d-community/LOVE-Example-Browser/
+
+https://love2d.org/forums/
+
+https://love2d.org/wiki/Category:Tutorials
+
+https://github.com/tombatossals/love2d-examples
+
+https://github.com/miko/Love2d-samples
+
+
+== Stash
+
+https://berbasoft.com/simplegametutorials/love/
+
+https://rvagamejams.com/learn2love/
+
+https://github.com/darkfrei/love2d-lua-tests
+
+https://sheepolution.com/learn/book/contents
+
+http://web.archive.org/web/20201124060526/http://nova-fusion.com/category/tutorials/
+
+=== A Löve2D Tutorial
+
+https://medium.com/@italo.maia
+
+
+. https://medium.com/@italo.maia/a-l%C3%B6ve2d-tutorial-part-01-7877bcc9b1f2
+. https://medium.com/@italo.maia/a-l%C3%B6ve2d-tutorial-part-02-images-sound-2f011ec4abe9
+. https://medium.com/@italo.maia/a-l%C3%B6ve2d-tutorial-part-03-shapes-a8e1f6565b5d
+. https://medium.com/@italo.maia/a-l%C3%B6ve2d-tutorial-part-04-fonts-input-4bafe7959f2e
+. https://medium.com/@italo.maia/a-l%C3%B6ve2d-tutorial-part-05-animate-5ccecf353269
+
+
+== YouTube
+
+Falling in LÖVE with Lua
+
+https://www.youtube.com/watch?v=JJ_ypbTQLws
+
+Pong - Lecture 0 - CS50's Introduction to Game Development 2018
+
+https://www.youtube.com/watch?v=GfwpRU0cT10
+
+=== Gamefromscratch
+
+
+Game Development For The Complete Beginner -- Series Introduction
+
+https://www.youtube.com/watch?v=HYYsedq2Ng4
