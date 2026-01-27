@@ -1,0 +1,39 @@
+= LÖVE
+:toc:
+:sectnums:
+ifndef::env-github[:icons: font]
+:note-caption: :paperclip:
+:important-caption: :exclamation:
+:warning-caption: :warning:
+
+[IMPORTANT]
+====
+The commit history of this branch is volatile. +
+Rebasing and force pushing happens at will. +
+The commits in this branch mostly collect changes with a narrow scope. +
+They rarely document code evolution. +
+The history may be rewritten without notice.
+====
+== LÖVE
+
+https://love2d.org/
+
+https://github.com/love2d/love
+
+https://github.com/hghpublic/love2d-love
+
+image:dev/screenshots/love.png[]
+
+== testing
+
+[source, bash]
+----
+$WORKSPACE_ROOT/build/love main.lua
+$WORKSPACE_ROOT/build/love main.lua > $DEV_ROOT/logs/testing/testing.log 2>&1
+----
+
+regex to remove color from log output::
++
+----
+\[3.m
+----
