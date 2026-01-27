@@ -1,0 +1,28 @@
+= Issues
+
+----
+https://github.com/fmtlib/fmt/blob/master/src/format.cc
+
+
+----
+
+namespace detail {
+
+template FMT_API auto dragonbox::to_decimal(float x) noexcept
+    -> dragonbox::decimal_fp<float>;
+template FMT_API auto dragonbox::to_decimal(double x) noexcept
+    -> dragonbox::decimal_fp<double>;
+----
+...
+
+[build] FAILED: love 
+[build] : && /usr/bin/aarch64-linux-gnu-g++-14 -g -pthread -Wl,--dependency-file=CMakeFiles/love.dir/link.d CMakeFiles/love.dir/src/love.cpp.o -o love  -Wl,-rpath,/workspaces/love2d-love/build:  liblove-12.0.so  liblove_common.a  liblove_audio_root.a  liblove_audio_null.a  liblove_audio_openal.a  vcpkg_installed/arm64-linux/debug/lib/libopenal.a  liblove_data.a  liblove_event_root.a  liblove_event_sdl.a  liblove_filesystem_root.a  liblove_filesystem_physfs.a  liblove_font_root.a  liblove_font_freetype.a  vcpkg_installed/arm64-linux/debug/lib/libfreetyped.a  vcpkg_installed/arm64-linux/debug/lib/libharfbuzz.a  liblove_graphics_root.a  liblove_graphics_opengl.a  liblove_graphics_vulkan.a  liblove_image_root.a  liblove_image_magpie.a  vcpkg_installed/arm64-linux/debug/lib/libz.a  liblove_joystick_root.a  liblove_joystick_sdl.a  liblove_keyboard_root.a  liblove_keyboard_sdl.a  liblove_math.a  liblove_mouse_root.a  liblove_mouse_sdl.a  liblove_physics_root.a  liblove_physics_box2d.a  liblove_sensor_root.a  liblove_sensor_sdl.a  liblove_sound_root.a  liblove_sound_lullaby.a  vcpkg_installed/arm64-linux/debug/lib/libmodplug.a  /usr/lib/aarch64-linux-gnu/libvorbisfile.so  liblove_system_root.a  liblove_system_sdl.a  liblove_thread_root.a  liblove_thread_sdl.a  liblove_timer.a  liblove_touch_root.a  liblove_touch_sdl.a  liblove_video_root.a  liblove_video_theora.a  vcpkg_installed/arm64-linux/debug/lib/libogg.a  vcpkg_installed/arm64-linux/debug/lib/libtheora.a  vcpkg_installed/arm64-linux/debug/lib/libtheoradec.a  liblove_window_root.a  liblove_window_sdl.a  vcpkg_installed/arm64-linux/debug/lib/libSDL3.a  liblove_3p_box2d.a  liblove_3p_ddsparse.a  liblove_3p_enet.a  liblove_3p_glad.a  liblove_3p_glslang.a  liblove_3p_lodepng.a  liblove_3p_luasocket.a  liblove_3p_lua53.a  liblove_3p_luahttps.a  vcpkg_installed/arm64-linux/debug/lib/libluajit-5.1.a  liblove_3p_lz4.a  liblove_3p_noise1234.a  liblove_3p_physfs.a  liblove_3p_spirv_cross.a  liblove_3p_wuff.a  liblove_3p_xxhash.a  vcpkg_installed/arm64-linux/debug/lib/libpng16d.a  vcpkg_installed/arm64-linux/debug/lib/libz.a  -lm  vcpkg_installed/arm64-linux/debug/lib/libfmtd.a && :
+[build] /usr/bin/ld: love: hidden symbol `_ZN3fmt3v116detail9dragonbox10to_decimalIfEENS2_10decimal_fpIT_EES5_' in vcpkg_installed/arm64-linux/debug/lib/libfmtd.a(format.cc.o) is referenced by DSO
+[build] /usr/bin/ld: final link failed: bad value
+[build] collect2: error: ld returned 1 exit status
+[build] ninja: build stopped: subcommand failed.
+[proc] The command: /usr/local/bin/cmake --build /workspaces/love2d-love/build --config Debug --target all -- exited with code: 1
+[driver] Build completed: 00:00:22.989
+[build] Build finished with exit code 1
+
+----
