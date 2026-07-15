@@ -1,0 +1,28 @@
+= Readme for iOS
+:toc:
+:sectnums:
+:experimental:
+
+== Building LÖVE for iOS
+
+In order to run `LÖVE` for `iOS`, it must first be compiled and installed. To do that, you'll need `macOS` and https://developer.apple.com/xcode/[Xcode].
+
+* If the include and libraries folders are not present in the `love/platform/xcode/ios` folder and there's no `love/platform/xcode/shared/` folder, https://bitbucket.org/rude/love/downloads/love-0.10.0-ios-libraries.zip[download them] and place them there. They contain the third-party library dependencies used by `LÖVE`.
+
+* Open the Xcode project found at `love/platform/xcode/love.xcodeproj`, and select the `love-ios` target in the dropdown menu at the top of the window.
+
+* You may want to change the `Build Configuration` from `Debug` to `Release` mode for better runtime performance, by opening the `Edit Scheme…` menu from the same dropdown selection.
+
+* Choose either an `iOS Simulator` device or your plugged-in `iOS` device from the dropdown selection to the right of the previous one, and click the `Build-and-Run` ▶︎ button to the left, which will install and run `LÖVE` on the target device after compiling it.
+
+== Running Games on iOS
+
+`LÖVE` on `iOS` includes a simple list interface of games that are installed (until you https://love2d.org/wiki/Game_Distribution[fuse] a `.love` to it for distribution.)
+
+* To put a `.love` file on the `iOS Simulator` after `LÖVE` is installed, drag the file onto the ``iOS Simulator``'s window while it's open. `LÖVE` will launch if it's not running already. If another game is currently active you may need to quit `LÖVE` for the new game to show up (press kbd:[Shift+Command+H] twice to open the App Switcher menu on the `iOS Simulator`.)
+
+* To put a `.love` file or game folder on your iOS device after `LÖVE` is installed, you can either download it with the `Safari`, or transfer it from your computer through `iTunes` when your device is connected: open `iTunes`, go to the `iOS` device which has `LÖVE` installed, go to the `Apps` section and scroll down and find `LÖVE`, and add the `.love` file or game folder to ``LÖVE``'s Documents section.
+
+== Distributing a Game on iOS
+
+Refer to the https://love2d.org/wiki/Game_Distribution#iOS[Game Distribution] `LÖVE` wiki page.
